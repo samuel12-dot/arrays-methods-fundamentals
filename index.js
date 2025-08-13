@@ -20,12 +20,19 @@ people.push('ann')
 console.log(people)
 console.log(people.indexOf('ann'))
 console.log(people.lastIndexOf('ann'))
+
 people.indexOf('anu') == -1 ? people.unshift('anu') : ''
 console.log(people)
+
 console.log(people.includes('ayodele'))
+
 const xPeople = people.concat(...['santamonica'])// Concat method doesn't modify the existing array
+
+
 console.log(people)
 console.log(xPeople)
+
+console.log(xPeople.map( str => str.slice(0, 2).replace(str[0], str[0].toUpperCase())))
 
 function add(x, y) {
     return x + y
@@ -38,7 +45,7 @@ function capitalize(str) {
 }
 add(4,6)
 
-const truncate = str 
+const truncate = str => str.slice(0, 2)
 
 function handleVowel(str) {
     str = str.toLowerCase()
@@ -58,6 +65,8 @@ const studentsAges = '12,34,56,47,98'.split(',').map(num => parseInt(num))
 console.log(studentsAges)
 console.log(typeof studentsAges)
 
+
+
 const studentsHD = "12, 33, 13, 55, 324, 26, 40, 0f, 1b".split(',').map(num => parseInt(num, 16)).map(num => num % 10)
 const studentsBinary = "11001, 111, 101, 001, 110".split(',').map(num => parseInt(num, 2)).filter(num => num < 10)
 
@@ -69,5 +78,8 @@ console.log(studentsBinary.reduce((a, b) => a * b, 1))
 const arr1 = [2]
 const arr2 = arr1
 console.log(arr1 == arr2)
+
+
+
 
 
